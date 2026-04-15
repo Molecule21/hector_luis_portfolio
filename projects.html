@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Archive | Hector Luis A. Tinagsa</title>
+  <meta name="description" content="Full project archive of Hector Luis A. Tinagsa — Full Stack Developer. All web applications, healthcare systems, CRM tools, and mobile apps." />
+  <meta name="author" content="Hector Luis A. Tinagsa" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow glow-1" aria-hidden="true"></div>
+  <div class="bg-glow glow-2" aria-hidden="true"></div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" id="navLogoArchive">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">HLT</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#about"      class="nav-link" id="archiveNavAbout">About</a></li>
+        <li><a href="index.html#experience" class="nav-link" id="archiveNavExp">Experience</a></li>
+        <li><a href="index.html#projects"   class="nav-link" id="archiveNavProjects">Projects</a></li>
+        <li><a href="index.html#contact"    class="nav-link" id="archiveNavContact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+    <ul role="list">
+      <li><a href="index.html#about"      class="mobile-link">About</a></li>
+      <li><a href="index.html#experience" class="mobile-link">Experience</a></li>
+      <li><a href="index.html#projects"   class="mobile-link">Projects</a></li>
+      <li><a href="index.html#contact"    class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ===================== ARCHIVE HERO ===================== -->
+  <header class="archive-hero" id="archiveHero">
+    <a href="index.html#projects" class="back-link" id="backToPortfolio">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to Portfolio
+    </a>
+    <h1>Project <span class="highlight">Archive</span></h1>
+    <p>All projects I've built — from enterprise systems to mobile apps.<br>Use the filters to explore by category.</p>
+
+    <!-- Filter Tabs -->
+    <div class="filter-bar" role="navigation" aria-label="Project category filters">
+      <button class="filter-btn active" data-filter="all"        id="filterAll">All</button>
+      <button class="filter-btn"        data-filter="web"        id="filterWeb">Web App</button>
+      <button class="filter-btn"        data-filter="healthcare" id="filterHealthcare">Healthcare</button>
+      <button class="filter-btn"        data-filter="crm"        id="filterCRM">CRM</button>
+      <button class="filter-btn"        data-filter="mobile"     id="filterMobile">Mobile</button>
+      <button class="filter-btn"        data-filter="api"        id="filterAPI">API / Backend</button>
+    </div>
+  </header>
+
+  <!-- ===================== ARCHIVE GRID ===================== -->
+  <main class="archive-container" id="archiveMain">
+    <div class="archive-grid" id="archiveGrid" role="list" aria-label="Project archive">
+
+      <!-- Sample Card 1 — replace with your real projects -->
+      <article class="archive-card" role="listitem" data-category="web" id="archiveCard1">
+        <div class="archive-img-wrap">
+          <img src="" alt="" class="archive-img" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="archive-img-fallback">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+            <span>Web Application</span>
+          </div>
+          <span class="archive-cat-badge">Web App</span>
+        </div>
+        <div class="archive-body">
+          <h3>Project Title Here</h3>
+          <p>Brief description of what this project does and the impact it delivered. Add your real project info here.</p>
+          <div class="archive-tags">
+            <span class="archive-tag">React</span>
+            <span class="archive-tag">Node.js</span>
+            <span class="archive-tag">MySQL</span>
+          </div>
+          <div class="archive-links">
+            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
+            </a>
+            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sample Card 2 -->
+      <article class="archive-card" role="listitem" data-category="healthcare" id="archiveCard2">
+        <div class="archive-img-wrap">
+          <img src="" alt="" class="archive-img" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="archive-img-fallback">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+            <span>Healthcare System</span>
+          </div>
+          <span class="archive-cat-badge">Healthcare</span>
+        </div>
+        <div class="archive-body">
+          <h3>Hospital Management System</h3>
+          <p>A full-stack hospital management platform with dashboards, reporting, and patient data management.</p>
+          <div class="archive-tags">
+            <span class="archive-tag">Laravel</span>
+            <span class="archive-tag">Vue.js</span>
+            <span class="archive-tag">MySQL</span>
+          </div>
+          <div class="archive-links">
+            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
+            </a>
+            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sample Card 3 -->
+      <article class="archive-card" role="listitem" data-category="crm" id="archiveCard3">
+        <div class="archive-img-wrap">
+          <img src="" alt="" class="archive-img" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="archive-img-fallback">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+            </svg>
+            <span>CRM Dashboard</span>
+          </div>
+          <span class="archive-cat-badge">CRM</span>
+        </div>
+        <div class="archive-body">
+          <h3>CRM & Business Dashboard</h3>
+          <p>Customer relationship management system with analytics, pipeline tracking, and automation tools.</p>
+          <div class="archive-tags">
+            <span class="archive-tag">Next.js</span>
+            <span class="archive-tag">TypeScript</span>
+            <span class="archive-tag">PostgreSQL</span>
+          </div>
+          <div class="archive-links">
+            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
+            </a>
+            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sample Card 4 -->
+      <article class="archive-card" role="listitem" data-category="mobile" id="archiveCard4">
+        <div class="archive-img-wrap">
+          <img src="" alt="" class="archive-img" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="archive-img-fallback">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
+            <span>Mobile App</span>
+          </div>
+          <span class="archive-cat-badge">Mobile</span>
+        </div>
+        <div class="archive-body">
+          <h3>Flutter Healthcare App</h3>
+          <p>Cross-platform mobile application for teen nutrition education built with Flutter and Firebase.</p>
+          <div class="archive-tags">
+            <span class="archive-tag">Flutter</span>
+            <span class="archive-tag">Firebase</span>
+            <span class="archive-tag">Dart</span>
+          </div>
+          <div class="archive-links">
+            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
+            </a>
+            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sample Card 5 -->
+      <article class="archive-card" role="listitem" data-category="api" id="archiveCard5">
+        <div class="archive-img-wrap">
+          <img src="" alt="" class="archive-img" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="archive-img-fallback">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+            <span>API / Backend</span>
+          </div>
+          <span class="archive-cat-badge">API / Backend</span>
+        </div>
+        <div class="archive-body">
+          <h3>RESTful API Service</h3>
+          <p>Scalable backend API service with authentication, rate limiting, and third-party service integrations.</p>
+          <div class="archive-tags">
+            <span class="archive-tag">Node.js</span>
+            <span class="archive-tag">Express</span>
+            <span class="archive-tag">MongoDB</span>
+          </div>
+          <div class="archive-links">
+            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Documentation">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Docs
+            </a>
+            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sample Card 6 -->
+      <article class="archive-card" role="listitem" data-category="web" id="archiveCard6">
+        <div class="archive-img-wrap">
+          <img src="" alt="" class="archive-img" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="archive-img-fallback">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            <span>E-Commerce</span>
+          </div>
+          <span class="archive-cat-badge">Web App</span>
+        </div>
+        <div class="archive-body">
+          <h3>Ecommerce Platform</h3>
+          <p>Full-featured ecommerce application with product management, cart, and Shopify integration.</p>
+          <div class="archive-tags">
+            <span class="archive-tag">Flutter</span>
+            <span class="archive-tag">Shopify API</span>
+            <span class="archive-tag">Dart</span>
+          </div>
+          <div class="archive-links">
+            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
+            </a>
+            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Empty state (shown when no results) -->
+      <div class="empty-state" id="emptyState" style="display:none;" role="status" aria-live="polite">
+        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <p>No projects found in this category.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===================== ADD PROJECT MODAL ===================== -->
+  <div class="modal-overlay" id="addProjectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" role="document">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">
+          Add <span class="highlight">Project</span>
+        </h2>
+        <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <form class="modal-form" id="addProjectForm" novalidate>
+        <div class="modal-row">
+          <div class="form-group">
+            <label for="projectTitle" class="form-label">Project Title *</label>
+            <input type="text" id="projectTitle" name="title" class="form-input"
+                   placeholder="My Awesome Project" required autocomplete="off" />
+          </div>
+          <div class="form-group">
+            <label for="projectCategory" class="form-label">Category *</label>
+            <select id="projectCategory" name="category" class="form-select" required>
+              <option value="" disabled selected>Select category…</option>
+              <option value="web">Web App</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="crm">CRM</option>
+              <option value="mobile">Mobile</option>
+              <option value="api">API / Backend</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="projectDesc" class="form-label">Description *</label>
+          <textarea id="projectDesc" name="description" class="form-textarea"
+                    placeholder="What does this project do? What problem does it solve?" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="projectTech" class="form-label">Tech Stack (comma separated)</label>
+          <input type="text" id="projectTech" name="tech" class="form-input"
+                 placeholder="React, Node.js, MySQL, AWS" autocomplete="off" />
+        </div>
+
+        <div class="modal-row">
+          <div class="form-group">
+            <label for="projectLiveUrl" class="form-label">Live URL</label>
+            <input type="url" id="projectLiveUrl" name="liveUrl" class="form-input"
+                   placeholder="https://yourproject.com" autocomplete="off" />
+          </div>
+          <div class="form-group">
+            <label for="projectCodeUrl" class="form-label">Source / Repo URL</label>
+            <input type="url" id="projectCodeUrl" name="codeUrl" class="form-input"
+                   placeholder="https://github.com/…" autocomplete="off" />
+          </div>
+        </div>
+
+        <!-- Image Upload -->
+        <div class="form-group">
+          <label class="form-label">Project Screenshot / Image</label>
+          <div class="img-upload-zone" id="imgUploadZone" role="button" tabindex="0"
+               aria-label="Upload project image">
+            <div class="upload-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
+            <p>Drag & drop or click to upload</p>
+            <span>PNG, JPG, WebP · max 5MB</span>
+            <input type="file" id="projectImageInput" name="image" accept="image/*"
+                   style="display:none;" aria-hidden="true" />
+          </div>
+          <div class="img-preview" id="imgPreview">
+            <div class="img-preview-wrap">
+              <img id="imgPreviewSrc" src="" alt="Preview" />
+              <button type="button" class="img-remove-btn" id="imgRemoveBtn" aria-label="Remove image">✕</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="modalFormNote" class="form-note" aria-live="polite"></div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" id="modalCancelBtn">Cancel</button>
+          <button type="submit" class="btn-add-project" id="addProjectSubmitBtn">
+            Add Project
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FAB — Add Project -->
+  <button class="fab" id="addProjectFab" aria-label="Add new project" aria-haspopup="dialog">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+    </svg>
+    <span class="fab-tooltip">Add Project</span>
+  </button>
+
+  <script src="js/projects.js"></script>
+</body>
+</html>
