@@ -82,206 +82,303 @@
   <main class="archive-container" id="archiveMain">
     <div class="archive-grid" id="archiveGrid" role="list" aria-label="Project archive">
 
-      <!-- Sample Card 1 — replace with your real projects -->
-      <article class="archive-card" role="listitem" data-category="web" id="archiveCard1">
+      <!-- Project Archive Card 1 -->
+      <article class="archive-card" role="listitem" data-category="healthcare" id="archiveCard1">
         <div class="archive-img-wrap">
-          <img src="" alt="" class="archive-img" loading="lazy"
+          <img src="project pictures/1st pic.png" alt="Lifeline Heathcare Canada" class="archive-img" loading="lazy"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="archive-img-fallback">
+          <div class="archive-img-fallback" style="display:none;" aria-hidden="true">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
             </svg>
-            <span>Web Application</span>
+            <span>Project Screenshot</span>
           </div>
-          <span class="archive-cat-badge">Web App</span>
+          <span class="archive-cat-badge">Healthcare CRM</span>
         </div>
         <div class="archive-body">
-          <h3>Project Title Here</h3>
-          <p>Brief description of what this project does and the impact it delivered. Add your real project info here.</p>
+          <h3>Lifeline Heathcare Canada</h3>
+          <p>Lifeline Healthcare Canada offers travel nursing, healthcare staffing, home health care, infusion therapy, and comprehensive patient support services across Canada.</p>
+          <div class="archive-tags">
+            <span class="archive-tag">PHP</span>
+            <span class="archive-tag">CodeIgniter</span>
+            <span class="archive-tag">REST API</span>
+          </div>
+          <div class="archive-links">
+            <a href="https://www.lifelinehealthcarecanada.com/" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project Archive Card 2 -->
+      <article class="archive-card" role="listitem" data-category="crm" id="archiveCard2">
+        <div class="archive-img-wrap">
+          <img src="project pictures/2nd pic.png" alt="SellAgent SASS Platform" class="archive-img" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="archive-img-fallback" style="display:none;" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+            <span>Project Screenshot</span>
+          </div>
+          <span class="archive-cat-badge">SASS / CRM</span>
+        </div>
+        <div class="archive-body">
+          <h3>SellAgent SASS Platform</h3>
+          <p>A frontend-focused project built with a modern, responsive UI for AI-driven sales automation and lead handling.</p>
           <div class="archive-tags">
             <span class="archive-tag">React</span>
-            <span class="archive-tag">Node.js</span>
-            <span class="archive-tag">MySQL</span>
-          </div>
-          <div class="archive-links">
-            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Live Demo
-            </a>
-            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Sample Card 2 -->
-      <article class="archive-card" role="listitem" data-category="healthcare" id="archiveCard2">
-        <div class="archive-img-wrap">
-          <img src="" alt="" class="archive-img" loading="lazy"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="archive-img-fallback">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-            </svg>
-            <span>Healthcare System</span>
-          </div>
-          <span class="archive-cat-badge">Healthcare</span>
-        </div>
-        <div class="archive-body">
-          <h3>Hospital Management System</h3>
-          <p>A full-stack hospital management platform with dashboards, reporting, and patient data management.</p>
-          <div class="archive-tags">
-            <span class="archive-tag">Laravel</span>
-            <span class="archive-tag">Vue.js</span>
-            <span class="archive-tag">MySQL</span>
-          </div>
-          <div class="archive-links">
-            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Live Demo
-            </a>
-            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Sample Card 3 -->
-      <article class="archive-card" role="listitem" data-category="crm" id="archiveCard3">
-        <div class="archive-img-wrap">
-          <img src="" alt="" class="archive-img" loading="lazy"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="archive-img-fallback">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
-            </svg>
-            <span>CRM Dashboard</span>
-          </div>
-          <span class="archive-cat-badge">CRM</span>
-        </div>
-        <div class="archive-body">
-          <h3>CRM & Business Dashboard</h3>
-          <p>Customer relationship management system with analytics, pipeline tracking, and automation tools.</p>
-          <div class="archive-tags">
-            <span class="archive-tag">Next.js</span>
             <span class="archive-tag">TypeScript</span>
-            <span class="archive-tag">PostgreSQL</span>
+            <span class="archive-tag">GSAP</span>
+            <span class="archive-tag">Gatsby</span>
           </div>
           <div class="archive-links">
-            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+            <a href="https://sellagent.ai/" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               Live Demo
             </a>
-            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
           </div>
         </div>
       </article>
 
-      <!-- Sample Card 4 -->
-      <article class="archive-card" role="listitem" data-category="mobile" id="archiveCard4">
+      <!-- Project Archive Card 3 -->
+      <article class="archive-card" role="listitem" data-category="api" id="archiveCard3">
         <div class="archive-img-wrap">
-          <img src="" alt="" class="archive-img" loading="lazy"
+          <img src="project pictures/3rd pic.png" alt="SellAgent Dashboard" class="archive-img" loading="lazy"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="archive-img-fallback">
+          <div class="archive-img-fallback" style="display:none;" aria-hidden="true">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
             </svg>
-            <span>Mobile App</span>
+            <span>Project Screenshot</span>
           </div>
-          <span class="archive-cat-badge">Mobile</span>
+          <span class="archive-cat-badge">Dashboard / API</span>
         </div>
         <div class="archive-body">
-          <h3>Flutter Healthcare App</h3>
-          <p>Cross-platform mobile application for teen nutrition education built with Flutter and Firebase.</p>
+          <h3>SellAgent Dashboard</h3>
+          <p>High-performance admin dashboard with real-time analytics, inventory management & seamless REST API integration.</p>
           <div class="archive-tags">
-            <span class="archive-tag">Flutter</span>
-            <span class="archive-tag">Firebase</span>
-            <span class="archive-tag">Dart</span>
+            <span class="archive-tag">React</span>
+            <span class="archive-tag">Redux</span>
+            <span class="archive-tag">REST API</span>
           </div>
           <div class="archive-links">
-            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+            <a href="https://app.sellagent.ai/" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               Live Demo
             </a>
-            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
           </div>
         </div>
       </article>
 
-      <!-- Sample Card 5 -->
-      <article class="archive-card" role="listitem" data-category="api" id="archiveCard5">
+      <!-- Project Archive Card 4 -->
+      <article class="archive-card" role="listitem" data-category="api" id="archiveCard4">
         <div class="archive-img-wrap">
-          <img src="" alt="" class="archive-img" loading="lazy"
+          <img src="project pictures/4th pic.png" alt="Diligentsia" class="archive-img" loading="lazy"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="archive-img-fallback">
+          <div class="archive-img-fallback" style="display:none;" aria-hidden="true">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
             </svg>
-            <span>API / Backend</span>
+            <span>Project Screenshot</span>
           </div>
-          <span class="archive-cat-badge">API / Backend</span>
+          <span class="archive-cat-badge">Dashboard / API</span>
         </div>
         <div class="archive-body">
-          <h3>RESTful API Service</h3>
-          <p>Scalable backend API service with authentication, rate limiting, and third-party service integrations.</p>
+          <h3>Diligentsia</h3>
+          <p>This project is a React-based version inspired by diligentsia.co.uk. It includes a clean, responsive dashboard for managing content and data efficiently.</p>
           <div class="archive-tags">
-            <span class="archive-tag">Node.js</span>
-            <span class="archive-tag">Express</span>
-            <span class="archive-tag">MongoDB</span>
+            <span class="archive-tag">React</span>
+            <span class="archive-tag">TypeScript</span>
+            <span class="archive-tag">GSAP</span>
+            <span class="archive-tag">Redux</span>
           </div>
           <div class="archive-links">
-            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Documentation">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Docs
-            </a>
-            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
+            <a href="https://diligentsia.co.uk/" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
             </a>
           </div>
         </div>
       </article>
 
-      <!-- Sample Card 6 -->
-      <article class="archive-card" role="listitem" data-category="web" id="archiveCard6">
+      <!-- Project Archive Card 5 -->
+      <article class="archive-card" role="listitem" data-category="web" id="archiveCard5">
         <div class="archive-img-wrap">
-          <img src="" alt="" class="archive-img" loading="lazy"
+          <img src="project pictures/5th pic.png" alt="Softtik Agency Website" class="archive-img" loading="lazy"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="archive-img-fallback">
+          <div class="archive-img-fallback" style="display:none;" aria-hidden="true">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
             </svg>
-            <span>E-Commerce</span>
+            <span>Project Screenshot</span>
           </div>
           <span class="archive-cat-badge">Web App</span>
         </div>
         <div class="archive-body">
-          <h3>Ecommerce Platform</h3>
-          <p>Full-featured ecommerce application with product management, cart, and Shopify integration.</p>
+          <h3>Softtik Agency Website</h3>
+          <p>A professional business website that showcases IT and software services with a clean layout and responsive design.</p>
           <div class="archive-tags">
-            <span class="archive-tag">Flutter</span>
-            <span class="archive-tag">Shopify API</span>
-            <span class="archive-tag">Dart</span>
+            <span class="archive-tag">React</span>
+            <span class="archive-tag">TypeScript</span>
+            <span class="archive-tag">GSAP</span>
           </div>
           <div class="archive-links">
-            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+            <a href="https://softtik.com/" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               Live Demo
             </a>
-            <a href="#" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Source code">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
+          </div>
+        </div>
+      </article>
+
+      <!-- Project Archive Card 6 -->
+      <article class="archive-card" role="listitem" data-category="web" id="archiveCard6">
+        <div class="archive-img-wrap">
+          <img src="project pictures/6th pic.png" alt="Storewizard SASS Platform" class="archive-img" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="archive-img-fallback" style="display:none;" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+            <span>Project Screenshot</span>
+          </div>
+          <span class="archive-cat-badge">Web App / SASS</span>
+        </div>
+        <div class="archive-body">
+          <h3>Storewizard SASS Platform</h3>
+          <p>An AI-powered eCommerce assistant platform with a clean interface, designed to help online stores automate tasks and boost sales.</p>
+          <div class="archive-tags">
+            <span class="archive-tag">React</span>
+            <span class="archive-tag">TypeScript</span>
+            <span class="archive-tag">GSAP</span>
+            <span class="archive-tag">Gatsby</span>
+          </div>
+          <div class="archive-links">
+            <a href="https://storewizard.ai/" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project Archive Card 7 -->
+      <article class="archive-card" role="listitem" data-category="web" id="archiveCard7">
+        <div class="archive-img-wrap">
+          <img src="project pictures/7th pic.png" alt="Konfer | Event React Template" class="archive-img" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="archive-img-fallback" style="display:none;" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+            <span>Project Screenshot</span>
+          </div>
+          <span class="archive-cat-badge">Web App</span>
+        </div>
+        <div class="archive-body">
+          <h3>Konfer | Event React Template</h3>
+          <p>A React-based event and conference website with a clean, more attractive design and smooth, responsive interactions.</p>
+          <div class="archive-tags">
+            <span class="archive-tag">React</span>
+            <span class="archive-tag">TypeScript</span>
+            <span class="archive-tag">GSAP</span>
+          </div>
+          <div class="archive-links">
+            <a href="https://konfer-react.expert-themes.com/" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project Archive Card 8 -->
+      <article class="archive-card" role="listitem" data-category="web" id="archiveCard8">
+        <div class="archive-img-wrap">
+          <img src="project pictures/8th pic.png" alt="Eventrox | Event React Template" class="archive-img" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="archive-img-fallback" style="display:none;" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+            <span>Project Screenshot</span>
+          </div>
+          <span class="archive-cat-badge">Web App</span>
+        </div>
+        <div class="archive-body">
+          <h3>Eventrox | Event React Template</h3>
+          <p>A React-based event and conference website with a clean, more attractive design and smooth, responsive interactions.</p>
+          <div class="archive-tags">
+            <span class="archive-tag">React</span>
+            <span class="archive-tag">TypeScript</span>
+            <span class="archive-tag">GSAP</span>
+          </div>
+          <div class="archive-links">
+            <a href="https://eventrox-react.expert-themes.com/" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project Archive Card 9 -->
+      <article class="archive-card" role="listitem" data-category="web" id="archiveCard9">
+        <div class="archive-img-wrap">
+          <img src="project pictures/9th pic.png" alt="Iryzo E-commerce" class="archive-img" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="archive-img-fallback" style="display:none;" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+            <span>Project Screenshot</span>
+          </div>
+          <span class="archive-cat-badge">eCommerce</span>
+        </div>
+        <div class="archive-body">
+          <h3>Iryzo E-commerce</h3>
+          <p>A Shopify eCommerce store for artificial jewellery for ladies, designed for a smooth shopping experience with bilingual support.</p>
+          <div class="archive-tags">
+            <span class="archive-tag">Shopify</span>
+            <span class="archive-tag">Liquid</span>
+            <span class="archive-tag">CSS3</span>
+          </div>
+          <div class="archive-links">
+            <a href="https://iryzo.com/" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project Archive Card 10 -->
+      <article class="archive-card" role="listitem" data-category="web" id="archiveCard10">
+        <div class="archive-img-wrap">
+          <img src="project pictures/10th pic.png" alt="Frozen – Preserving Quality" class="archive-img" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="archive-img-fallback" style="display:none;" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+            <span>Project Screenshot</span>
+          </div>
+          <span class="archive-cat-badge">Web App</span>
+        </div>
+        <div class="archive-body">
+          <h3>Frozen – Preserving Quality</h3>
+          <p>A modern WordPress site for frozen food products, focused on clear product presentation and easy navigation.</p>
+          <div class="archive-tags">
+            <span class="archive-tag">WordPress</span>
+            <span class="archive-tag">SEO</span>
+          </div>
+          <div class="archive-links">
+            <a href="https://frozen.com.sa/" class="archive-link" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Live Demo
             </a>
           </div>
         </div>
@@ -295,6 +392,7 @@
         <p>No projects found in this category.</p>
       </div>
 
+    </div>
     </div>
   </main>
 
