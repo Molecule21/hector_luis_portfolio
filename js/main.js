@@ -1,5 +1,5 @@
 /* ============================================================
-   PORTFOLIO — main.js
+   PORTFOLIO  main.js
    Hector Luis A. Tinagsa
    ============================================================ */
 
@@ -7,22 +7,22 @@
    EMAILJS CONFIGURATION
    ---------------------------------------------------------------
    To receive contact form messages in Gmail (hectortins821@gmail.com):
-   1. Go to https://www.emailjs.com/ — sign up FREE
-   2. Click "Add Service" → choose Gmail → connect hectortins821@gmail.com
-      → Copy the "Service ID" (e.g. "service_xxxxxxx")
-   3. Click "Email Templates" → Create Template → set:
+   1. Go to https://www.emailjs.com/  sign up FREE
+   2. Click "Add Service"  choose Gmail  connect hectortins821@gmail.com
+       Copy the "Service ID" (e.g. "service_xxxxxxx")
+   3. Click "Email Templates"  Create Template  set:
         To:      hectortins821@gmail.com
         Subject: New Portfolio Message from {{from_name}}
         Body:    Name: {{from_name}}
                  Email: {{reply_to}}
                  Message: {{message}}
-      → Save → Copy the "Template ID" (e.g. "template_xxxxxxx")
-   4. Go to "Account" → Copy your "Public Key"
+       Save  Copy the "Template ID" (e.g. "template_xxxxxxx")
+   4. Go to "Account"  Copy your "Public Key"
    5. Paste all three values below:
    ============================================================ */
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';      // ← paste here
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';      // ← paste here
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';     // ← paste here
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';      //  paste here
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';      //  paste here
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';     //  paste here
 
 const EMAILJS_CONFIGURED = (
   EMAILJS_PUBLIC_KEY  !== 'YOUR_PUBLIC_KEY' &&
@@ -130,7 +130,7 @@ function typeLoop() {
 typeLoop();
 
 
-/* === INTERSECTION OBSERVER — SCROLL REVEAL === */
+/* === INTERSECTION OBSERVER  SCROLL REVEAL === */
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -170,7 +170,7 @@ activeStyle.textContent = `.nav-link.active { color: var(--clr-accent) !importan
 document.head.appendChild(activeStyle);
 
 
-/* === CONTACT FORM — EmailJS / Fallback === */
+/* === CONTACT FORM  EmailJS / Fallback === */
 const contactForm = document.getElementById('contactForm');
 const formNote    = document.getElementById('formNote');
 
@@ -195,29 +195,29 @@ if (contactForm) {
 
     // Sending state
     btn.disabled = true;
-    btn.querySelector('span').textContent = 'Sending…';
+    btn.querySelector('span').textContent = 'Sending';
     showNote('', false);
 
     if (EMAILJS_CONFIGURED && typeof emailjs !== 'undefined') {
-      // ── EmailJS path (sends directly to hectortins821@gmail.com) ──
+      //  EmailJS path (sends directly to hectortins821@gmail.com) 
       try {
         await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
           from_name: name,
           reply_to:  email,
           message:   msg,
         });
-        showNote('✓ Message sent! I\'ll get back to you soon.', false);
+        showNote(' Message sent! I\'ll get back to you soon.', false);
         contactForm.reset();
       } catch (err) {
         console.error('EmailJS error:', err);
-        showNote('⚠ Something went wrong. Please email me directly at hectortins821@gmail.com', true);
+        showNote(' Something went wrong. Please email me directly at hectortins821@gmail.com', true);
       }
     } else {
-      // ── Fallback: open Gmail compose in new tab ──
+      //  Fallback: open Gmail compose in new tab 
       const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
       const body    = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}`);
       window.open(`https://mail.google.com/mail/?view=cm&to=hectortins821@gmail.com&su=${subject}&body=${body}`, '_blank');
-      showNote('✓ Opening Gmail… Complete sending in the new tab.', false);
+      showNote(' Opening Gmail Complete sending in the new tab.', false);
       contactForm.reset();
     }
 
@@ -248,117 +248,151 @@ document.addEventListener('mousemove', e => {
   });
 }, { passive: true });
 
-
 /* ============================================================
-   PORTFOLIO ENHANCEMENTS � Added JS
+   PORTFOLIO ENHANCEMENTS  JS
    ============================================================ */
 
-/* === HIRE BANNER DISMISS === */
-const hireBannerClose = document.getElementById('hireBannerClose');
-if (hireBannerClose) {
-  hireBannerClose.addEventListener('click', () => {
-    const banner = document.getElementById('hireBanner');
-    if (banner) { banner.style.animation = 'none'; banner.style.opacity = '0'; banner.style.height = '0'; banner.style.padding = '0'; banner.style.overflow = 'hidden'; banner.style.transition = 'all 0.4s ease'; }
+/* --- HIRE BANNER DISMISS --- */
+(function() {
+  var closeBtn = document.getElementById('hireBannerClose');
+  if (!closeBtn) return;
+  closeBtn.addEventListener('click', function() {
+    var banner = document.getElementById('hireBanner');
+    if (!banner) return;
+    banner.style.transition = 'opacity 0.3s ease, max-height 0.4s ease, padding 0.3s ease';
+    banner.style.opacity = '0';
+    banner.style.maxHeight = '0';
+    banner.style.padding   = '0';
+    banner.style.overflow  = 'hidden';
   });
-}
+})();
 
-/* === ANIMATED STAT COUNTERS === */
-function animateCounter(el, target, duration = 1500) {
-  let start = 0;
-  const step = (timestamp) => {
-    if (!start) start = timestamp;
-    const progress = Math.min((timestamp - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const suffix = el.textContent.replace(/[0-9]/g, '').trim();
-    el.textContent = Math.floor(eased * target) + suffix;
-    if (progress < 1) requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
-}
-
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      const text = el.textContent;
-      const num = parseInt(text.replace(/\D/g, ''));
-      if (!isNaN(num) && !el.dataset.animated) {
-        el.dataset.animated = '1';
-        const suffix = text.replace(/[0-9]/g, '');
-        animateCounter({ textContent: text, get textContent() { return this._t; }, set textContent(v) { this._t = v; el.textContent = v; } }, num);
-      }
-      statsObserver.unobserve(el);
+/* --- ANIMATED STAT COUNTERS --- */
+(function() {
+  function animateCounter(el, target, duration) {
+    var start = null;
+    var suffix = el.textContent.replace(/[\d]/g, '');
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
     }
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll('.stat-number').forEach(el => statsObserver.observe(el));
+    requestAnimationFrame(step);
+  }
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      if (el.dataset.counted) return;
+      el.dataset.counted = '1';
+      var raw = el.textContent.trim();
+      var num = parseInt(raw.replace(/\D/g, ''), 10);
+      if (!isNaN(num) && num > 0) animateCounter(el, num, 1500);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.stat-number').forEach(function(el) { obs.observe(el); });
+})();
 
-/* === SKILL BAR ANIMATIONS === */
-const skillBarObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-        const w = bar.dataset.width || '0';
-        setTimeout(() => { bar.style.width = w + '%'; }, 200);
+/* --- SKILL BAR ANIMATIONS --- */
+(function() {
+  var el = document.getElementById('skillBars');
+  if (!el) return;
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.querySelectorAll('.skill-bar-fill').forEach(function(bar) {
+        var w = bar.getAttribute('data-width') || '0';
+        setTimeout(function() { bar.style.width = w + '%'; }, 250);
       });
-      skillBarObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.3 });
-const skillBarsEl = document.getElementById('skillBars');
-if (skillBarsEl) skillBarObserver.observe(skillBarsEl);
-
-/* === COPY EMAIL === */
-const copyEmailBtn = document.getElementById('copyEmailBtn');
-const toastEl = document.getElementById('toast');
-
-function showToast(msg) {
-  if (!toastEl) return;
-  toastEl.textContent = msg;
-  toastEl.classList.add('show');
-  setTimeout(() => toastEl.classList.remove('show'), 2500);
-}
-
-if (copyEmailBtn) {
-  copyEmailBtn.addEventListener('click', () => {
-    navigator.clipboard.writeText('hectortins821@gmail.com').then(() => {
-      copyEmailBtn.classList.add('copied');
-      copyEmailBtn.querySelector('span') && (copyEmailBtn.querySelector('span').textContent = 'Copied!');
-      showToast('? Email copied to clipboard!');
-      setTimeout(() => {
-        copyEmailBtn.classList.remove('copied');
-        if (copyEmailBtn.querySelector('span')) copyEmailBtn.querySelector('span').textContent = 'Copy';
-      }, 2000);
+      obs.unobserve(entry.target);
     });
-  });
-}
+  }, { threshold: 0.3 });
+  obs.observe(el);
+})();
 
-/* === SERVICE CARD REVEAL === */
-document.querySelectorAll('.service-card').forEach(el => revealObserver.observe(el));
-
-/* === MAIN PAGE PROJECT FILTERS === */
-const projFilterBtns = document.querySelectorAll('.proj-filter-btn');
-const projectCards   = document.querySelectorAll('#featuredProjects .project-card');
-
-projFilterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    projFilterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    projectCards.forEach(card => {
-      const cat = card.dataset.cat || 'all';
-      if (filter === 'all' || cat === filter) {
-        card.classList.remove('hidden');
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(16px)';
-        requestAnimationFrame(() => {
-          card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        });
-      } else {
-        card.classList.add('hidden');
+/* --- SERVICE CARD REVEAL --- */
+(function() {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
       }
     });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.service-card').forEach(function(card) { obs.observe(card); });
+})();
+
+/* --- COPY EMAIL BUTTON --- */
+(function() {
+  var btn   = document.getElementById('copyEmailBtn');
+  var toast = document.getElementById('toast');
+  if (!btn) return;
+
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2500);
+  }
+
+  btn.addEventListener('click', function() {
+    var email = 'hectortins821@gmail.com';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(function() {
+        btn.classList.add('copied');
+        var span = btn.querySelector('span');
+        if (span) span.textContent = 'Copied!';
+        showToast('Email copied to clipboard!');
+        setTimeout(function() {
+          btn.classList.remove('copied');
+          if (span) span.textContent = 'Copy';
+        }, 2000);
+      });
+    } else {
+      /* Fallback for older browsers */
+      var ta = document.createElement('textarea');
+      ta.value = email;
+      ta.style.position = 'fixed';
+      ta.style.opacity  = '0';
+      document.body.appendChild(ta);
+      ta.focus(); ta.select();
+      try { document.execCommand('copy'); showToast('Email copied!'); } catch(e) {}
+      document.body.removeChild(ta);
+    }
   });
-});
+})();
+
+/* --- MAIN PAGE PROJECT FILTERS --- */
+(function() {
+  var btns  = document.querySelectorAll('.proj-filter-btn');
+  var cards = document.querySelectorAll('#featuredProjects .project-card');
+  if (!btns.length || !cards.length) return;
+
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      cards.forEach(function(card) {
+        var cat = card.getAttribute('data-cat') || 'all';
+        if (filter === 'all' || cat === filter) {
+          card.classList.remove('hidden');
+          card.style.opacity   = '0';
+          card.style.transform = 'translateY(16px)';
+          requestAnimationFrame(function() {
+            card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+            card.style.opacity    = '1';
+            card.style.transform  = 'translateY(0)';
+          });
+        } else {
+          card.classList.add('hidden');
+          card.style.transition = '';
+        }
+      });
+    });
+  });
+})();
