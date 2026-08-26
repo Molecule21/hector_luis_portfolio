@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,10 +21,20 @@
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
 
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%23080b14'/%3E%3Ctext y='.9em' font-size='55' font-family='monospace' fill='%2300d4ff'%3EH%3C/text%3E%3C/svg%3E" />
+  <meta property="og:image" content="https://molecule21.github.io/hector_luis_portfolio/project%20pictures/1st%20pic.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <!-- === AVAILABLE FOR HIRE BANNER === -->
+  <div class="hire-banner" id="hireBanner">
+    <span class="hire-dot"></span>
+    <span class="hire-text mono"><strong>Available for Work</strong> — Open to Freelance &amp; Full-Time Remote Opportunities</span>
+    <a href="#contact" class="hire-cta">Let&apos;s Talk →</a>
+    <button class="hire-close" id="hireBannerClose" aria-label="Dismiss banner">✕</button>
+  </div>
 
   <!-- Animated Background -->
   <div class="bg-grid" aria-hidden="true"></div>
@@ -46,7 +56,8 @@
       </a>
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="#about" class="nav-link" id="navAbout">About</a></li>
-        <li><a href="#experience" class="nav-link" id="navExperience">Experience</a></li>
+        <li><a href="#services" class="nav-link" id="navServices">Services</a></li>
+        <li><a href="#services" class="nav-link" id="navExperience">Experience</a></li>
         <li><a href="#projects" class="nav-link" id="navProjects">Projects</a></li>
         <li><a href="#contact" class="nav-link" id="navContact">Contact</a></li>
       </ul>
@@ -60,7 +71,8 @@
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
     <ul role="list">
       <li><a href="#about" class="mobile-link" id="mobileAbout">About</a></li>
-      <li><a href="#experience" class="mobile-link" id="mobileExperience">Experience</a></li>
+      <li><a href="#services" class="mobile-link" id="mobileServices">Services</a></li>
+      <li><a href="#services" class="mobile-link" id="mobileExperience">Experience</a></li>
       <li><a href="#projects" class="mobile-link" id="mobileProjects">Projects</a></li>
       <li><a href="#contact" class="mobile-link" id="mobileContact">Contact</a></li>
     </ul>
@@ -121,14 +133,14 @@
           <pre class="code-block"><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
   <span class="code-prop">name</span>: <span class="code-string">"Hector Luis Tinagsa"</span>,
   <span class="code-prop">role</span>: <span class="code-string">"Full Stack Developer"</span>,
-  <span class="code-prop">location</span>: <span class="code-string">"Remote 🌏"</span>,
+  <span class="code-prop">location</span>: <span class="code-string">"Remote ðŸŒ"</span>,
   <span class="code-prop">stack</span>: [
     <span class="code-string">"React"</span>, <span class="code-string">"Node.js"</span>,
     <span class="code-string">"PHP/Laravel"</span>, <span class="code-string">"MySQL"</span>,
     <span class="code-string">"Flutter"</span>, <span class="code-string">"AWS"</span>,
   ],
   <span class="code-prop">passion</span>: <span class="code-string">"Building scalable systems"</span>,
-  <span class="code-prop">status</span>: <span class="code-string">"Open to opportunities ✅"</span>,
+  <span class="code-prop">status</span>: <span class="code-string">"Open to opportunities âœ…"</span>,
 };</code></pre>
         </div>
       </div>
@@ -163,7 +175,7 @@
             specialize in both front-end and back-end development, creating efficient, user-friendly solutions that
             solve real-world problems and improve operational workflows.</p>
           <p class="about-para">Over the years, I've worked with international teams and clients remotely, leading
-            end-to-end development — from planning and architecture to deployment and maintenance. My experience
+            end-to-end development â€” from planning and architecture to deployment and maintenance. My experience
             includes developing CRM systems, healthcare platforms, dashboards, automation tools, and custom business
             applications.</p>
           <p class="about-para">I am detail-oriented, organized, and comfortable working in fast-paced environments with
@@ -179,7 +191,38 @@
             <div class="skill-tag" role="listitem">CRM & Business Automation</div>
             <div class="skill-tag" role="listitem">Performance Optimization</div>
             <div class="skill-tag" role="listitem">Cloud & Web Infrastructure</div>
+          
+          <!-- Skill Proficiency Bars -->
+          <div class="skills-proficiency" id="skillBars">
+            <p class="skills-prof-title">// Proficiency Levels</p>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-label"><span>React / Next.js</span><span>90%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label"><span>PHP / Laravel / CodeIgniter</span><span>88%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label"><span>Node.js / Express</span><span>82%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label"><span>WordPress / Webflow</span><span>85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label"><span>MySQL / PostgreSQL</span><span>80%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label"><span>Flutter / Mobile</span><span>72%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="72"></div></div>
+              </div>
+            </div>
           </div>
+</div>
         </div>
 
         <div class="about-sidebar">
@@ -234,12 +277,94 @@
     </div>
   </section>
 
+
+  <!-- ===================== SERVICES SECTION ===================== -->
+  <section class="section services-section" id="services" aria-labelledby="servicesHeading">
+    <div class="container">
+      <div class="section-label">
+        <span class="mono section-num">02.</span>
+        <span>Services</span>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <h2 id="servicesHeading" class="section-title">What I <span class="highlight">Offer</span></h2>
+      <p class="section-subtitle">End-to-end solutions tailored to your business needs — from idea to deployment.</p>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal" id="serviceCard1">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="service-title">Full Stack Web Development</h3>
+          <p class="service-desc">End-to-end web applications with clean architecture, scalable backends, and responsive frontends built for performance.</p>
+          <div class="service-tags">
+            <span class="service-tag">React</span><span class="service-tag">Node.js</span><span class="service-tag">Laravel</span><span class="service-tag">MySQL</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal" id="serviceCard2">
+          <div class="service-icon" style="background:rgba(124,58,237,0.08);border-color:rgba(124,58,237,0.2);color:#a78bfa;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3 class="service-title">WordPress &amp; Webflow Sites</h3>
+          <p class="service-desc">Professional, SEO-optimized websites using WordPress or Webflow — fast, mobile-friendly, and easy to manage.</p>
+          <div class="service-tags">
+            <span class="service-tag">WordPress</span><span class="service-tag">Webflow</span><span class="service-tag">SEO</span><span class="service-tag">UI/UX</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal" id="serviceCard3">
+          <div class="service-icon" style="background:rgba(6,255,165,0.06);border-color:rgba(6,255,165,0.2);color:#06ffa5;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="service-title">CRM &amp; Business Systems</h3>
+          <p class="service-desc">Custom CRM platforms, dashboards, and automation tools that streamline operations and improve team productivity.</p>
+          <div class="service-tags">
+            <span class="service-tag">CRM</span><span class="service-tag">Dashboards</span><span class="service-tag">Automation</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal" id="serviceCard4">
+          <div class="service-icon" style="background:rgba(255,107,107,0.08);border-color:rgba(255,107,107,0.2);color:#ff6b6b;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          </div>
+          <h3 class="service-title">REST API &amp; Backend Dev</h3>
+          <p class="service-desc">Robust, secure RESTful APIs and backend systems integrated with third-party services, payment gateways, and cloud platforms.</p>
+          <div class="service-tags">
+            <span class="service-tag">REST API</span><span class="service-tag">Express.js</span><span class="service-tag">AWS</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal" id="serviceCard5">
+          <div class="service-icon" style="background:rgba(251,191,36,0.08);border-color:rgba(251,191,36,0.2);color:#fbbf24;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3 class="service-title">Technical &amp; Operations VA</h3>
+          <p class="service-desc">Virtual assistance combining technical support, project coordination, documentation, and business operations management.</p>
+          <div class="service-tags">
+            <span class="service-tag">Admin Support</span><span class="service-tag">Asana/Jira</span><span class="service-tag">Google Workspace</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal" id="serviceCard6">
+          <div class="service-icon" style="background:rgba(0,212,255,0.08);border-color:rgba(0,212,255,0.2);color:#00d4ff;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3 class="service-title">UI/UX Design &amp; Prototyping</h3>
+          <p class="service-desc">Modern, user-centered interface design with a focus on usability, aesthetics, and conversion-optimized layouts.</p>
+          <div class="service-tags">
+            <span class="service-tag">Figma</span><span class="service-tag">Responsive</span><span class="service-tag">Animations</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
   <!-- ===================== EXPERIENCE SECTION ===================== -->
   <section class="section experience-section" id="experience" aria-labelledby="expHeading">
     <div class="container">
       <div class="section-label">
-        <span class="mono section-num">02.</span>
-        <span>Experience</span>
+        <span class="mono section-num">03.</span><span>Experience</span>
         <div class="section-line" aria-hidden="true"></div>
       </div>
       <h2 id="expHeading" class="section-title">Career <span class="highlight">Timeline</span></h2>
@@ -255,7 +380,7 @@
                 <p class="job-company">Lifeline Healthcare Canada</p>
               </div>
               <div class="job-meta">
-                <span class="job-period mono">Jul 2024 – Dec 2025</span>
+                <span class="job-period mono">Jul 2024 â€“ Dec 2025</span>
                 <span class="job-badge remote">Remote</span>
               </div>
             </div>
@@ -279,8 +404,8 @@
                 <p class="job-company">Tinkers Development / OrchardTek</p>
               </div>
               <div class="job-meta">
-                <span class="job-period mono">Mar 2023 – Jul 2024</span>
-                <span class="job-badge remote">Utah, USA · Remote</span>
+                <span class="job-period mono">Mar 2023 â€“ Jul 2024</span>
+                <span class="job-badge remote">Utah, USA Â· Remote</span>
               </div>
             </div>
             <ul class="job-duties" role="list">
@@ -303,8 +428,8 @@
                 <p class="job-company">Gladwell Corporation / Webtrack GPS</p>
               </div>
               <div class="job-meta">
-                <span class="job-period mono">Aug 2022 – Mar 2023</span>
-                <span class="job-badge remote">Guatemala · Remote</span>
+                <span class="job-period mono">Aug 2022 â€“ Mar 2023</span>
+                <span class="job-badge remote">Guatemala Â· Remote</span>
               </div>
             </div>
             <ul class="job-duties" role="list">
@@ -327,7 +452,7 @@
                 <p class="job-company">Webtrack GPS</p>
               </div>
               <div class="job-meta">
-                <span class="job-period mono">Mar 2022 – Aug 2023</span>
+                <span class="job-period mono">Mar 2022 â€“ Aug 2023</span>
                 <span class="job-badge remote">Remote</span>
               </div>
             </div>
@@ -351,8 +476,8 @@
                 <p class="job-company">Hospital Systems</p>
               </div>
               <div class="job-meta">
-                <span class="job-period mono">Dec 2022 – Jun 2023</span>
-                <span class="job-badge project">Atlanta, GA · Remote</span>
+                <span class="job-period mono">Dec 2022 â€“ Jun 2023</span>
+                <span class="job-badge project">Atlanta, GA Â· Remote</span>
               </div>
             </div>
             <ul class="job-duties" role="list">
@@ -374,8 +499,8 @@
                 <p class="job-company">Hospital Systems</p>
               </div>
               <div class="job-meta">
-                <span class="job-period mono">Apr 2022 – Aug 2022</span>
-                <span class="job-badge project">Seattle, WA · Remote</span>
+                <span class="job-period mono">Apr 2022 â€“ Aug 2022</span>
+                <span class="job-badge project">Seattle, WA Â· Remote</span>
               </div>
             </div>
             <ul class="job-duties" role="list">
@@ -397,8 +522,8 @@
                 <p class="job-company">Healthcare App</p>
               </div>
               <div class="job-meta">
-                <span class="job-period mono">Jul 2021 – Oct 2021</span>
-                <span class="job-badge project">Atlanta, GA · Remote</span>
+                <span class="job-period mono">Jul 2021 â€“ Oct 2021</span>
+                <span class="job-badge project">Atlanta, GA Â· Remote</span>
               </div>
             </div>
             <ul class="job-duties" role="list">
@@ -419,8 +544,8 @@
                 <p class="job-company">Warranty Company</p>
               </div>
               <div class="job-meta">
-                <span class="job-period mono">Feb 2021 – May 2021</span>
-                <span class="job-badge project">Memphis, TN · Remote</span>
+                <span class="job-period mono">Feb 2021 â€“ May 2021</span>
+                <span class="job-badge project">Memphis, TN Â· Remote</span>
               </div>
             </div>
             <ul class="job-duties" role="list">
@@ -441,7 +566,7 @@
                 <p class="job-company">Ecommerce Shopify Projects</p>
               </div>
               <div class="job-meta">
-                <span class="job-period mono">Jul 2020 – Dec 2020</span>
+                <span class="job-period mono">Jul 2020 â€“ Dec 2020</span>
                 <span class="job-badge remote">Remote</span>
               </div>
             </div>
@@ -457,10 +582,10 @@
 
       </div>
 
-      <!-- View Full Resume CTA -->
+      <!-- Download Resume CTA -->
       <div class="resume-cta">
-        <a href="resume/Hector_Luis_Tinagsa_Resume.pdf.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume"
-          id="viewResumeBtn" aria-label="View full resume - opens in new tab">
+        <a href="resume/Hector_Luis_Tinagsa_Resume.pdf.pdf" download="Hector_Luis_Tinagsa_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume"
+          id="viewResumeBtn" aria-label="Download Resume - opens in new tab">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             aria-hidden="true">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -469,7 +594,7 @@
             <line x1="16" y1="17" x2="8" y2="17" />
             <polyline points="10 9 9 9 8 9" />
           </svg>
-          <span>View Full Resume</span>
+          <span>Download Resume</span>
           <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2" aria-hidden="true">
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
@@ -485,18 +610,28 @@
   <section class="section projects-section" id="projects" aria-labelledby="projectsHeading">
     <div class="container">
       <div class="section-label">
-        <span class="mono section-num">03.</span>
-        <span>Projects</span>
+        <span class="mono section-num">04.</span><span>Projects</span>
         <div class="section-line" aria-hidden="true"></div>
       </div>
       <h2 id="projectsHeading" class="section-title">Featured <span class="highlight">Work</span></h2>
-      <p class="section-subtitle">A selection of projects I'm proud of — real solutions for real problems.</p>
+      <p class="section-subtitle">A selection of projects I'm proud of â€” real solutions for real problems.</p>
 
-      <!-- Featured Projects Grid -->
+      
+      <!-- Project Filters -->
+      <div class="project-filters" role="navigation" aria-label="Filter projects">
+        <button class="proj-filter-btn active" data-filter="all" id="pfAll">All</button>
+        <button class="proj-filter-btn" data-filter="healthcare" id="pfHealthcare">Healthcare</button>
+        <button class="proj-filter-btn" data-filter="crm" id="pfCRM">CRM / SaaS</button>
+        <button class="proj-filter-btn" data-filter="wordpress" id="pfWordpress">WordPress</button>
+        <button class="proj-filter-btn" data-filter="webflow" id="pfWebflow">Webflow</button>
+        <button class="proj-filter-btn" data-filter="mobile" id="pfMobile">Mobile</button>
+        <button class="proj-filter-btn" data-filter="ecommerce" id="pfEcommerce">eCommerce</button>
+      </div>
+<!-- Featured Projects Grid -->
       <div class="projects-grid" id="featuredProjects" role="list" aria-label="Featured projects">
 
         <!-- Project Card 1 -->
-        <article class="project-card" role="listitem" id="projectCard1">
+        <article class="project-card" role="listitem" id="projectCard1" data-cat="healthcare">
           <div class="project-image-wrap">
             <img src="project pictures/1st pic.png" alt="Lifeline Heathcare Canada screenshot" class="project-image"
               loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
@@ -540,7 +675,7 @@
         </article>
 
         <!-- Project Card 2 -->
-        <article class="project-card" role="listitem" id="projectCard2">
+        <article class="project-card" role="listitem" id="projectCard2" data-cat="crm">
           <div class="project-image-wrap">
             <img src="project pictures/2nd pic.png" alt="SellAgent SASS Platform screenshot" class="project-image"
               loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
@@ -585,7 +720,7 @@
         </article>
 
         <!-- Project Card 3 -->
-        <article class="project-card" role="listitem" id="projectCard3">
+        <article class="project-card" role="listitem" id="projectCard3" data-cat="crm">
           <div class="project-image-wrap">
             <img src="project pictures/3rd pic.png" alt="SellAgent Dashboard screenshot" class="project-image"
               loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
@@ -629,7 +764,7 @@
         </article>
 
         <!-- Project Card 4 -->
-        <article class="project-card" role="listitem" id="projectCard4">
+        <article class="project-card" role="listitem" id="projectCard4" data-cat="crm">
           <div class="project-image-wrap">
             <img src="project pictures/4th pic.png" alt="Diligentsia screenshot" class="project-image" loading="lazy"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
@@ -674,7 +809,7 @@
         </article>
 
         <!-- Project Card 5 -->
-        <article class="project-card" role="listitem" id="projectCard5">
+        <article class="project-card" role="listitem" id="projectCard5" data-cat="crm">
           <div class="project-image-wrap">
             <img src="project pictures/5th pic.png" alt="Softtik Agency Website screenshot" class="project-image"
               loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
@@ -719,7 +854,7 @@
         </article>
 
         <!-- Project Card 6 -->
-        <article class="project-card" role="listitem" id="projectCard6">
+        <article class="project-card" role="listitem" id="projectCard6" data-cat="ecommerce">
           <div class="project-image-wrap">
             <img src="project pictures/6th pic.png" alt="Storewizard SASS Platform screenshot" class="project-image"
               loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
@@ -764,7 +899,7 @@
         </article>
 
         <!-- Project Card 7 -->
-        <article class="project-card" role="listitem" id="projectCard7">
+        <article class="project-card" role="listitem" id="projectCard7" data-cat="crm">
           <div class="project-image-wrap">
             <img src="project pictures/7th pic.png" alt="Konfer | Event & Conference React Template screenshot"
               class="project-image" loading="lazy"
@@ -809,7 +944,7 @@
         </article>
 
         <!-- Project Card 8 -->
-        <article class="project-card" role="listitem" id="projectCard8">
+        <article class="project-card" role="listitem" id="projectCard8" data-cat="crm">
           <div class="project-image-wrap">
             <img src="project pictures/8th pic.png" alt="Eventrox | Event & Conference React Template screenshot"
               class="project-image" loading="lazy"
@@ -854,7 +989,7 @@
         </article>
 
         <!-- Project Card 9 -->
-        <article class="project-card" role="listitem" id="projectCard9">
+        <article class="project-card" role="listitem" id="projectCard9" data-cat="ecommerce">
           <div class="project-image-wrap">
             <img src="project pictures/9th pic.png" alt="Iryzo E-commerce screenshot" class="project-image"
               loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
@@ -898,9 +1033,9 @@
         </article>
 
         <!-- Project Card 10 -->
-        <article class="project-card" role="listitem" id="projectCard10">
+        <article class="project-card" role="listitem" id="projectCard10" data-cat="wordpress">
           <div class="project-image-wrap">
-            <img src="project pictures/10th pic.png" alt="Frozen – Preserving Quality screenshot" class="project-image"
+            <img src="project pictures/10th pic.png" alt="Frozen â€“ Preserving Quality screenshot" class="project-image"
               loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
             <div class="project-image-fallback" style="display:none;" aria-hidden="true">
               <div class="fallback-icon">
@@ -917,7 +1052,7 @@
             </div>
           </div>
           <div class="project-info">
-            <h3 class="project-name">Frozen – Preserving Quality</h3>
+            <h3 class="project-name">Frozen â€“ Preserving Quality</h3>
             <p class="project-desc">A modern WordPress site for frozen food products, focused on clear product
               presentation and easy navigation.</p>
             <div class="project-tags" role="list" aria-label="Technologies used">
@@ -941,7 +1076,7 @@
         </article>
 
         <!-- Project Card 11 -->
-        <article class="project-card" role="listitem" id="projectCard11">
+        <article class="project-card" role="listitem" id="projectCard11" data-cat="wordpress">
           <div class="project-image-wrap">
             <img src="project pictures/socialmed.png" alt="Social Med Consultants website screenshot" class="project-image"
               loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
@@ -984,7 +1119,7 @@
         </article>
 
         <!-- Project Card 12 -->
-        <article class="project-card" role="listitem" id="projectCard12">
+        <article class="project-card" role="listitem" id="projectCard12" data-cat="webflow">
           <div class="project-image-wrap">
             <img src="project pictures/haert2haert.png" alt="Haert2Heart website screenshot" class="project-image"
               loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
@@ -1049,8 +1184,7 @@
   <section class="section contact-section" id="contact" aria-labelledby="contactHeading">
     <div class="container">
       <div class="section-label">
-        <span class="mono section-num">04.</span>
-        <span>Get In Touch</span>
+        <span class="mono section-num">05.</span><span>Get In Touch</span>
         <div class="section-line" aria-hidden="true"></div>
       </div>
       <h2 id="contactHeading" class="section-title">Let's <span class="highlight">Connect</span></h2>
@@ -1069,6 +1203,10 @@
               <span class="contact-label">Email</span>
               <a href="mailto:hectortins821@gmail.com" class="contact-value"
                 id="contactEmail">hectortins821@gmail.com</a>
+              <button class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy
+              </button>
             </div>
           </div>
           <div class="contact-item">
@@ -1162,7 +1300,7 @@
     <div class="container">
       <div class="footer-inner">
         <p class="footer-copy mono">
-          &lt;/ Built by <span class="footer-name">Hector Luis A. Tinagsa</span> ·
+          &lt;/ Built by <span class="footer-name">Hector Luis A. Tinagsa</span> Â·
           <span id="footerYear"></span> &gt;
         </p>
         <div class="footer-links" role="list" aria-label="Social links">
@@ -1197,6 +1335,10 @@
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="js/main.js"></script>
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
 </body>
 
 </html>
+
+
+

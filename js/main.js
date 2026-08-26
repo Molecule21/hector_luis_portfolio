@@ -247,3 +247,118 @@ document.addEventListener('mousemove', e => {
     el.style.transform = `translate(${x * f}px, ${y * f}px)`;
   });
 }, { passive: true });
+
+
+/* ============================================================
+   PORTFOLIO ENHANCEMENTS — Added JS
+   ============================================================ */
+
+/* === HIRE BANNER DISMISS === */
+const hireBannerClose = document.getElementById('hireBannerClose');
+if (hireBannerClose) {
+  hireBannerClose.addEventListener('click', () => {
+    const banner = document.getElementById('hireBanner');
+    if (banner) { banner.style.animation = 'none'; banner.style.opacity = '0'; banner.style.height = '0'; banner.style.padding = '0'; banner.style.overflow = 'hidden'; banner.style.transition = 'all 0.4s ease'; }
+  });
+}
+
+/* === ANIMATED STAT COUNTERS === */
+function animateCounter(el, target, duration = 1500) {
+  let start = 0;
+  const step = (timestamp) => {
+    if (!start) start = timestamp;
+    const progress = Math.min((timestamp - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const suffix = el.textContent.replace(/[0-9]/g, '').trim();
+    el.textContent = Math.floor(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const text = el.textContent;
+      const num = parseInt(text.replace(/\D/g, ''));
+      if (!isNaN(num) && !el.dataset.animated) {
+        el.dataset.animated = '1';
+        const suffix = text.replace(/[0-9]/g, '');
+        animateCounter({ textContent: text, get textContent() { return this._t; }, set textContent(v) { this._t = v; el.textContent = v; } }, num);
+      }
+      statsObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-number').forEach(el => statsObserver.observe(el));
+
+/* === SKILL BAR ANIMATIONS === */
+const skillBarObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+        const w = bar.dataset.width || '0';
+        setTimeout(() => { bar.style.width = w + '%'; }, 200);
+      });
+      skillBarObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+const skillBarsEl = document.getElementById('skillBars');
+if (skillBarsEl) skillBarObserver.observe(skillBarsEl);
+
+/* === COPY EMAIL === */
+const copyEmailBtn = document.getElementById('copyEmailBtn');
+const toastEl = document.getElementById('toast');
+
+function showToast(msg) {
+  if (!toastEl) return;
+  toastEl.textContent = msg;
+  toastEl.classList.add('show');
+  setTimeout(() => toastEl.classList.remove('show'), 2500);
+}
+
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText('hectortins821@gmail.com').then(() => {
+      copyEmailBtn.classList.add('copied');
+      copyEmailBtn.querySelector('span') && (copyEmailBtn.querySelector('span').textContent = 'Copied!');
+      showToast('? Email copied to clipboard!');
+      setTimeout(() => {
+        copyEmailBtn.classList.remove('copied');
+        if (copyEmailBtn.querySelector('span')) copyEmailBtn.querySelector('span').textContent = 'Copy';
+      }, 2000);
+    });
+  });
+}
+
+/* === SERVICE CARD REVEAL === */
+document.querySelectorAll('.service-card').forEach(el => revealObserver.observe(el));
+
+/* === MAIN PAGE PROJECT FILTERS === */
+const projFilterBtns = document.querySelectorAll('.proj-filter-btn');
+const projectCards   = document.querySelectorAll('#featuredProjects .project-card');
+
+projFilterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    projFilterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    projectCards.forEach(card => {
+      const cat = card.dataset.cat || 'all';
+      if (filter === 'all' || cat === filter) {
+        card.classList.remove('hidden');
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(16px)';
+        requestAnimationFrame(() => {
+          card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        });
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
